@@ -1,0 +1,50 @@
+                                                        Attica Paan Masala
+
+Super admin Login
+
+	1. Dashboard
+	
+	2. supplier Management [add, edit, view & Delete Pages]
+	table columns: id, company name, gst, addressline, area, city, state, pincode, products,  status, created_date, updated_date
+	view page columns: sno, supplier, address, products, action(edit, delete)
+	
+	3. Category [add, edit, view & Delete Pages]
+	table columns: id, parentid, category, status, created_date, updated_date
+	view page columns: sno, category, status(toogle), action(edit, delete), date
+	
+	4. items [add, edit, view & Delete Pages]
+	table columns: id, itemname, variants, description, unitofmeasurement, price, status, created_date, updated_date
+	view page columns: sno, itemname, variants, description, unitofmeasurement, price, status, action(edit, delete),, date
+	
+	5. Purchases [add, edit, view & Delete Pages]
+	table columns: id, vendor, category, item, quantity, purchase price, date,
+	view page columns: sno, vendor, category, products, units, price, date, action(edit, delete)
+	
+	6. itemStock
+	view page columns: sno, category, item, stockcount, last stock(quantity, vendor, date) 
+	
+	7. Production [add, edit, view & Delete Pages]
+	table columns: id, productname, variants, description, unitofmeasurement, price, status, created_date, updated_date
+	view page columns: sno, productname, variants, description, unitofmeasurement, price, status, action(edit, delete),, date
+	
+	8. productStock
+	view page columns: sno, category, product, stockcount, last stock(quantity, vendor, date) 
+	
+	9. seller [add, edit, view & Delete Pages]
+	table columns: id, company name, gst, addressline, area, city, state, pincode,  status, created_date, updated_date
+	view page columns: sno, seller, address, products, action(edit, delete)
+	
+	10. supplies [add, edit, view & Delete Pages]
+	table columns: id, supplier, product, quantity, price, status, date
+	view page columns: sno, supplier, product, quantity, price, status, action(edit, delete), date
+	
+	11. orders
+	table columns: id, supplier, product, quantity, status, date
+	view page columns: sno, supplier, product, quantity, status(Approve | Reject), date
+	
+	12. Reset Password
+	
+	13. Users
+	will discuss later
+	
+	14. Logout
