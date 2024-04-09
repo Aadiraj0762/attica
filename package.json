@@ -6,14 +6,11 @@
   "scripts": {
     "dev": "nodemon api/index.js",
     "start": "node api/index.js",
-    "production": "NODE_ENV=production nodemon api/index.js",
+    "production": "SET NODE_ENV=production&& node api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "data:import": "node script/seed.js",
-    "product": "node script/product.js",
-    "build": "NODE_ENV=production nodemon api/index.js"
-},
-
-  
+    "product": "node script/product.js"
+  },
   "author": "Attica",
   "license": "ISC",
   "dependencies": {
@@ -38,6 +35,6 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.22"
   }
 }
