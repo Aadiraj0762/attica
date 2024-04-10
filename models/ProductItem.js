@@ -6,19 +6,19 @@ const ProductItemSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    // quantity: {
-    //   type: String,
-    //   required: true,
-    // },
-    // items: {
-    //   type: [
-    //     {
-    //       value: { type: String },
-    //       label: { type: String },
-    //     },
-    //   ],
-    //   required: false,
-    // },
+    itemsquantity: {
+      type: String,
+      required: true,
+    },
+    items: {
+      type: [
+        {
+          value: { type: String },
+          label: { type: String },
+        },
+      ],
+      required: false,
+    },
     title: {
       type: Object,
       required: true,
