@@ -59,19 +59,19 @@
 // module.exports = ProductItem;
 const mongoose = require("mongoose");
 
-const SelectedItemsSchema = new mongoose.Schema({
-    item: {
-        type: {
-            value: { type: String },
-            label: { type: String }
-        },
-        required: true
-    },
-    quantity: {
-        type: Number,
-        required: true
-    }
-});
+// const SelectedItemsSchema = new mongoose.Schema({
+//     item: {
+//         type: {
+//             value: { type: String },
+//             label: { type: String }
+//         },
+//         required: true
+//     },
+//     quantity: {
+//         type: Number,
+//         required: true
+//     }
+// });
 
 const ProductItemSchema = new mongoose.Schema({
 
@@ -96,7 +96,7 @@ const ProductItemSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    selectedItems: [SelectedItemsSchema],
+    // selectedItems: [SelectedItemsSchema],
     // selectedQuantity: {
     //     type: Number,
     //     default: 0

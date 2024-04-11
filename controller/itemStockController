@@ -1,0 +1,28 @@
+const ItemStock = require('../models/itemStockModel');
+
+const updateItemStock = async (req, res) => {
+  const { itemStockData } = req.body;
+
+  try {
+    // Iterate over the updated itemStockData and update the stock count in the database
+    for (const item of itemStockData) {
+      await ItemStock.findOneAndUpdate(
+        { category: item.category, item: item.item },
+        {
+          $set: {
+            stockcount: item.stockcount,
+            lastStock: item.lastStock,
+          },
+        },
+        { upsert: true }
+      );
+    }
+
+    res.status(200).json({ message: 'Stock counts updated successfully' });
+  } catch (error) {
+    console.error('Error updating stock counts:', error);
+    res.status(500).json({ error: 'An error occurred while updating stock counts' });
+  }
+};
+
+module.exports = { updateItemStock };

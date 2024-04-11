@@ -8,6 +8,7 @@ const router = express.Router();
 const { connectDB } = require("../config/db");
 const productRoutes = require("../routes/productRoutes");
 const productItemRoutes = require('../routes/productItemRoutes');
+const ItemStockRoute = require('../routes/ItemStockRoute');
 
 const itemRoutes = require("../routes/itemRoutes");
 const customerRoutes = require("../routes/customerRoutes");
@@ -120,7 +121,7 @@ app.use("/api/language/", languageRoutes);
 app.use("/api/purchases",purchasesRoutes);
 app.use("/api/supplies",suppliesRoutes);
 app.use("/api/productions",productionRoutes);
-
+app.use ("/api/itmstock",ItemStockRoute);
 //if you not use admin dashboard then these two route will not needed.
 app.use("/api/admin/", adminRoutes);
 app.use("/api/orders/", orderRoutes);
